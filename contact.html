@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Taps Oan Contact</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <div id="headerLogo">
+            <a href="index.html"><img src="images/logoHead2.png" alt="Taps Aff logo"></a>
+        </div>
+
+        <nav>
+            <ul class="topnav" id="myTopnav">
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="location.html">LOCATION</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li>|</li>
+                <li><a href="register.php">SIGN UP</a></li>
+                <li><a href="login.php">SIGN IN</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hamburger icon for slide out menu -->
+        <i class="material-icons" id="hamburger" onclick="openNav()">menu</i>
+
+        <!-- Slide out menu for mobile device view -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="shop.html">SHOP</a>
+            <a href="about.html">ABOUT</a>
+            <a href="location.html">LOCATION</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="register.php">SIGN UP</a>
+            <a href="login.php">SIGN IN</a>
+        </div>
+    </header>
+
+    <div id="contactContainer">
+        <div class="textBox">
+            <h1>Contact us</h1>
+            <p>Send us a message</p>
+
+            <form id="contactForm" action="contact.php" method="post">
+                <label>Name</label>
+                <input type="text" id="contactname" name="c-name" placeholder="eg: John Smith" required>
+                <label>Email</label>
+                <input type="email" name="c-email" id="contactemail" placeholder="eg: example@something.com" required>
+                <label>Message</label>
+                <input type="text" name="c-message" id="contactmessage" placeholder="Enter message here..." required>
+                <button class="hvr-ripple-out" type="submit" value="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="contactImageBox">
+        </div>
+    </div>
+
+
+    <footer>
+        <div id="social">
+            <a href="https://twitter.com/RobinWilkie"><img src="icons/Twitter_Color.png" alt="social media link to Twitter"></a>
+            <a href="https://www.facebook.com/robin.wilkie.73"><img src="icons/Facebook_Color.png" alt="social media link to Facebook"></a>
+            <a href="https://www.instagram.com/?hl=en"><img src="icons/Instagram_Color.png" alt="social media link to Instagram"></a>
+        </div>
+
+        <div id="copyright">
+            <p>&copy; Robin Wilkie</p>
+        </div>
+    </footer>
+
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/functions.js"></script>
+
+
+</body>
+
+</html>

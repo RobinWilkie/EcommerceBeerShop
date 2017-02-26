@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Taps Oan Index</title>
+    <!-- Robin Wilkie -->
+    <!-- Taps Aff e-commerce website project -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Taps Aff is an e-commerce website selling craft beer">
+</head>
+
+<body>
+    <header>
+        <div id="headerLogo">
+            <a href="index.html"><img src="images/logoHead2.png" alt="Taps Aff logo"></a>
+        </div>
+
+        <nav>
+            <ul class="topnav" id="myTopnav">
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="location.html">LOCATION</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li>|</li>
+                <li><a href="register.php">SIGN UP</a></li>
+                <li><a href="login.php">SIGN IN</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hamburger icon for slide out menu -->
+        <i class="material-icons" id="hamburger" onclick="openNav()">menu</i>
+
+        <!-- Slide out menu for mobile device view -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="shop.html">SHOP</a>
+            <a href="about.html">ABOUT</a>
+            <a href="location.html">LOCATION</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="register.php">SIGN UP</a>
+            <a href="login.php">SIGN IN</a>
+        </div>
+    </header>
+
+    <div id="indexContainer">
+        <!-- Banner image full width of page -->
+        <div class="background-image toggle-image first-image show"></div>
+        <div class="background-image toggle-image second-image"></div>
+        <div class="background-image toggle-image third-image"></div>
+        <!-- Main Taps Oan logo for centre of page -->
+        <div id="mainLogo">
+            <img src="images/TapsoanLogo.png" alt="large logo for Taps Oan beer">
+        </div>
+
+        <!-- Product images showing range of six beers -->
+        <div id="productsRange">
+            <a href="products.html"><img id="prod1" class="homeBottle" src="images/beers/ClydesideLager.png" alt="bottle of Taps Oan beer"></a>
+            <a href="products.html"><img id="prod2" class="homeBottle" src="images/beers/Halfdayipa.png" alt="bottle of Taps Oan beer"></a>
+            <a href="products.html"><img id="prod3" class="homeBottle" src="images/beers/PartickPilsner.png" alt="bottle of Taps Oan beer"></a>
+            <a href="products.html"><img id="prod4" class="homeBottle" src="images/beers/Setyoufree.png" alt="bottle of Taps Oan beer"></a>
+            <a href="products.html"><img id="prod5" class="homeBottle" src="images/beers/stout.png" alt="bottle of Taps Oan beer"></a>
+            <a href="products.html"><img id="prod6" class="homeBottle" src="images/beers/wheat.png" alt="bottle of Taps Oan beer"></a>
+        </div>
+    </div>
+
+    <footer>
+        <div id="social">
+            <a href="https://twitter.com/RobinWilkie"><img src="icons/Twitter_Color.png" alt="social media link to Twitter"></a>
+            <a href="https://www.facebook.com/robin.wilkie.73"><img src="icons/Facebook_Color.png" alt="social media link to Facebook"></a>
+            <a href="https://www.instagram.com/?hl=en"><img src="icons/Instagram_Color.png" alt="social media link to Instagram"></a>
+        </div>
+
+        <div id="copyright">
+            <p>&copy; Robin Wilkie</p>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/functions.js"></script>
+    <script>
+        function cycleBackgrounds() {
+            var index = 0;
+
+            $imageEls = $('.toggle-image'); // Get the images to be cycled.
+
+            setInterval(function () {
+                // Get the next index.  If at end, restart to the beginning.
+                index = index + 1 < $imageEls.length ? index + 1 : 0;
+                // Show the next image.
+                $imageEls.eq(index).addClass('show');
+                // Hide the previous image.
+                $imageEls.eq(index - 1).removeClass('show');
+
+            }, 2000);
+        };
+
+        // Document Ready.
+        $(function () {
+            cycleBackgrounds();
+        });
+    </script>
+</body>
+
+</html>

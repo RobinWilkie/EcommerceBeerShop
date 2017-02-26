@@ -1,0 +1,695 @@
+/* styles across all pages */
+
+
+/* add custom font */
+
+@font-face {
+    font-family: aquag;
+    src: url('../fonts/aqua.ttf') format('truetype');
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: aquag, Helvetica, sans-serif;
+    background-color: #FFB51B;
+    font-family: aquag;
+}
+
+
+/* styles for header across all pages */
+
+header {
+    height: 5%;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007E91;
+}
+
+#headerLogo {
+    height: 80%;
+    margin-left: 10px;
+    display: flex;
+}
+
+#headerLogo img {
+    height: 100%;
+}
+
+
+/* styles for navigation across all pages */
+
+nav {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px 0 10px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #FFB51B;
+    font-size: 1.35vw;
+    transition: all 0.1s ease-in-out 0s;
+}
+
+nav li a:hover {
+    border-bottom: 3px solid #FFB51B;
+}
+
+nav img {
+    height: 20px;
+}
+
+.link {
+    color: #000;
+}
+
+
+/* styles for responsive navigation slide out across all pages */
+
+#hamburger {
+    color: #FFB51B;
+    margin-right: 5px;
+    display: none;
+}
+
+#hamburger:hover {
+    cursor: pointer;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #007E91;
+    overflow-x: hidden;
+    padding-top: 10px;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #FFB51B;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover,
+.offcanvas a:focus {
+    color: #000000;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 36px;
+    margin-left: 50px;
+    margin-top: -14px;
+}
+
+.sidenav .closebtn:hover {
+    color: #FFB51B;
+}
+
+
+/* Styles for the footer */
+
+footer {
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007E91;
+}
+
+footer p {
+    color: #FFB51B;
+}
+
+#social img {
+    height: 3.2vh;
+    padding: 5px 0 0 5px;
+    transition: all 0.4s ease 0s;
+}
+
+#social img:hover {
+    -webkit-filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.9));
+}
+
+#copyright {
+    color: #FFB51B;
+    padding-right: 5px;
+}
+
+
+/* ---------- styles for INDEX page ------------- */
+
+#indexContainer {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.background-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.toggle-image {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 50%;
+    transition: opacity 1s ease-in-out;
+}
+
+.first-image {
+    background-image: url(../images/beerTaps1.jpg);
+    z-index: -3;
+    opacity: 0;
+}
+
+.second-image {
+    background-image: url(../images/beer2.jpg);
+    z-index: -2;
+    opacity: 0;
+}
+
+.third-image {
+    background-image: url(../images/beer3.jpg);
+    z-index: -1;
+    opacity: 0;
+}
+
+.first-image.show {
+    opacity: 1;
+}
+
+.second-image.show {
+    opacity: 1;
+}
+
+.third-image.show {
+    opacity: 1;
+}
+
+#mainLogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+#mainLogo img {
+    width: 15vw;
+}
+
+#productsRange {
+    position: absolute;
+    top: 50%;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#productsRange img {
+    height: 35vh;
+    transition: all 0.4s ease 0s;
+}
+
+#productsRange img:hover {
+    transform: scale(1.1);
+    -webkit-filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.9));
+}
+
+@media only screen and (max-width: 700px) {
+    #mainLogo {
+        top: 15%;
+    }
+    #mainLogo img {
+        width: 20vw;
+    }
+    #indexContainer {
+        align-items: center;
+    }
+    .toggle-image {
+        height: 25%;
+    }
+    #productsRange {
+        flex-wrap: wrap;
+        width: 50%;
+        top: 30%
+    }
+    #productsRange img {
+        height: 30vh;
+    }
+    nav {
+        display: none;
+    }
+    #hamburger {
+        display: block;
+    }
+}
+
+
+/* ---------- styles for SHOP page ------------- */
+
+#productsContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.productBox {
+    height: 70vh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+    transition: all 0.4s ease 0s;
+}
+
+.productBox:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.productBox img {
+    height: 35vh;
+    transition: all 0.4s ease 0s;
+}
+
+.productBox img:hover {
+    -webkit-filter: drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.9));
+}
+
+.productBox a {
+    text-decoration: none;
+    color: #007E91;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.btn-p {
+    width: 100%;
+    background-color: #007E91;
+    color: #FFB51B;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: none;
+    font-family: aquag;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 8px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.cartTotal {
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .productBox {
+        width: 98%;
+    }
+    .productBox img {
+        height: 55vw;
+        transition: all 0.4s ease 0s;
+    }
+}
+
+
+/* ---------- styles for every individual Product page ------------ */
+
+#clydesideWrapper {
+    height: 90%;
+    display: flex;
+}
+
+.productPic {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productPic img {
+    height: 80vh;
+}
+
+.productBlurb {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.buyForm input {
+    width: 10%;
+}
+
+
+/* ---------- styles for ABOUT page ------------- */
+
+#aboutContainer {
+    height: 90%;
+    display: flex;
+}
+
+.textBox {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textBox p {
+    margin: 10%;
+}
+
+.aboutimageBox {
+    width: 70%;
+    background: url(../images/Bar.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 500px) {
+    #aboutContainer {
+        flex-direction: column;
+    }
+    .textBox {
+        height: 80%;
+        width: 100%;
+        order: 2;
+    }
+    .aboutimageBox {
+        height: 20%;
+        width: 100%;
+        order: 1;
+    }
+}
+
+
+/* ---------- styles for LOCATION page ------------- */
+
+#locationContainer {
+    height: 90%;
+    display: flex;
+}
+
+#address {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#address p {
+    margin: 10%;
+    font-size: 18px;
+}
+
+#googleMap {
+    width: 70%;
+}
+
+@media only screen and (max-width: 500px) {
+    #locationContainer {
+        flex-direction: column;
+    }
+    #googleMap {
+        height: 70%;
+        width: 100%;
+    }
+    #address {
+        height: 30%;
+        width: 100%;
+    }
+    #address h1 {
+        font-size: 20px;
+        margin: 20px 0 -20px 0;
+    }
+    #address p {
+        font-size: 14px;
+    }
+}
+
+
+/* ---------- styles for CONTACT page ------------ */
+
+#contactContainer {
+    height: 90%;
+    display: flex;
+}
+
+.contactImageBox {
+    width: 70%;
+    background: url(../images/beerTaps2.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+form {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    background-color: #fff;
+    border-color: #007E91;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+    border-width: 2px;
+    border-style: solid;
+    color: #474e57;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 8px;
+    margin: 0 0 10px 0;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+
+form input:focus {
+    box-shadow: 0 0 15px rgba(81, 203, 238, 1);
+}
+
+form button {
+    width: 100%;
+    background-color: #007E91;
+    color: #FFB51B;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: none;
+    font-family: aquag;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 8px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+}
+
+
+/* hover effect for buttons */
+
+@-webkit-keyframes hvr-ripple-out {
+    100% {
+        top: -12px;
+        right: -12px;
+        bottom: -12px;
+        left: -12px;
+        opacity: 0;
+    }
+}
+
+@keyframes hvr-ripple-out {
+    100% {
+        top: -12px;
+        right: -12px;
+        bottom: -12px;
+        left: -12px;
+        opacity: 0;
+    }
+}
+
+.hvr-ripple-out {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+}
+
+.hvr-ripple-out:before {
+    content: '';
+    position: absolute;
+    border: #007E91 solid 6px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.hvr-ripple-out:hover:before,
+.hvr-ripple-out:focus:before,
+.hvr-ripple-out:active:before {
+    -webkit-animation-name: hvr-ripple-out;
+    animation-name: hvr-ripple-out;
+}
+
+@media only screen and (max-width: 500px) {
+    #contactContainer {
+        flex-direction: column;
+    }
+    .textBox {
+        height: 80%;
+        width: 100%;
+        order: 2;
+    }
+    .contactImageBox {
+        height: 20%;
+        width: 100%;
+        order: 1;
+    }
+}
+
+
+/* ---------- styles for THANKS page ------------ */
+
+#thanksWrap {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#thanks {
+    text-align: center;
+}
+
+#thanks a {
+    color: #000000;
+}
+
+
+/* ---------- styles for SIGN UP page ------------ */
+
+#registerWrap {
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#signUpForm {
+    width: 60vw;
+}
+
+
+/* ---------- styles for SIGN IN page ------------ */
+
+#signIn {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ---------- styles for WELCOME page ------------ */
+
+.welcomeWrap {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ---------- styles for ERROR page ------------ */
+
+#errorWrap {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ---------- styles for FORGOTTEN PASSWORD page ------------ */
+
+#passwordWrap {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#forgotten {
+    text-align: center;
+}
+
+#passwordForm {
+    width: 60vw;
+}
+
+
+/* ---------- styles for CONNECT page ------------ */
+
+#connectWrap {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
