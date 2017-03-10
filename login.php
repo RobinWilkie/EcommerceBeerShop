@@ -17,7 +17,7 @@
         $myusername = mysqli_real_escape_string($conn, $_POST['uname']);
         $mypassword = mysqli_real_escape_string($conn, $_POST['psw']);
         
-        $sql = "SELECT ID FROM users WHERE firstname = '$myusername' and password = '$mypassword'";
+        $sql = "SELECT ID FROM robin WHERE firstname = '$myusername' and password = '$mypassword'";
         $result = mysqli_query($conn,$sql);
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
         $active = $row['active'];
@@ -44,6 +44,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Taps Aff is an e-commerce website selling craft beer">
+        <meta charset="utf-8">
     </head>
 
     <body>

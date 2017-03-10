@@ -1,8 +1,8 @@
 <?php
 // Database connection details
-    $db = "robinwilkie";
-    $username = "rob";
-    $password = "1234";
-    $table = "users";
+    $db = "hndintco_shop";
+    $username = "hndintco_student";
+    $password = "cV;7R(kdHWF*";
+    $table = "robin";
     $servername = "localhost";
 ?>

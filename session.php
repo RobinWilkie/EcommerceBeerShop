@@ -8,7 +8,7 @@
     // make connection to database
     $conn = mysqli_connect($servername, $username, $password, $db);
    
-   $result= mysqli_query($conn, "select firstname from users where firstname = '$user_check' ");
+   $result= mysqli_query($conn, "select firstname from robin where firstname = '$user_check' ");
     if(!$result){
         echo 'Could not run query: ' . mysqli_error();
         exit;

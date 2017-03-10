@@ -2,10 +2,10 @@
 //Robin Wilkie
 //built 16-12-16
 //set variables for database connection
-    $db = "robinwilkie";
-    $username = "rob";
-    $password = "1234";
-    $table = "users";
+    $db = "hndintco_shop";
+    $username = "hndintco_student";
+    $password = "cV;7R(kdHWF*";
+    $table = "robin";
     $servername = "localhost";
 //set variables for form data
     $firstname = $_POST["firstname"];
@@ -19,7 +19,7 @@
         die("connection failed: " . $conn->connect_error); 
     }
 //insert form values into table
-    $sql = "INSERT INTO users (firstname, lastname, email, password) VALUES ('$firstname', '$lastname', '$email', '$pass')";
+    $sql = "INSERT INTO robin (firstname, lastname, email, password) VALUES ('$firstname', '$lastname', '$email', '$pass')";
 
 ?>
 
@@ -34,6 +34,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Taps Aff is an e-commerce website selling craft beer">
+        <meta charset="utf-8">
     </head>
 
     <body>

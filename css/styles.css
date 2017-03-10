@@ -631,6 +631,11 @@ form button {
     width: 60vw;
 }
 
+@media only screen and (max-width: 500px) {
+    #signUp p{
+        display: none;
+    }
+}
 
 /* ---------- styles for SIGN IN page ------------ */
 
